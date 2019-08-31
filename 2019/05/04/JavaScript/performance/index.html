@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小.babelrc: modules: falsep">
+<meta name="description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小. babelrc: modules: false">
 <meta name="keywords" content="Performance Optimize">
 <meta property="og:type" content="article">
 <meta property="og:title" content="performance">
 <meta property="og:url" content="http://yoursite.com/2019/05/04/JavaScript/performance/index.html">
 <meta property="og:site_name" content="Len&#39;s blog">
-<meta property="og:description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小.babelrc: modules: falsep">
+<meta property="og:description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小. babelrc: modules: false">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-17T09:14:09.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="performance">
-<meta name="twitter:description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小.babelrc: modules: falsep">
+<meta name="twitter:description" content="动态 import ui 组件按需加载 使用 CDN, webpack externals: { &amp;quot;echarts&amp;quot;: &amp;quot;echarts&amp;quot; } 开启 Gzip 压缩 devServer: { compress: true }  Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小. babelrc: modules: false">
 
 
 
@@ -358,24 +358,25 @@
 <li>使用 CDN, webpack <code>externals: { &quot;echarts&quot;: &quot;echarts&quot; }</code></li>
 <li>开启 Gzip 压缩 <code>devServer: { compress: true }</code></li>
 </ol>
-<p>Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小.<br>babelrc: modules: false<br>package.json: sideEffects: false/ [.css, .less, .sass]</p>
+<p>Tree Shaking: 打包时把一些没用到的代码删除, 保证打包后的体积最小.<br>
+babelrc: modules: false<br>
+package.json: sideEffects: false/ [.css, .less, .sass]</p>
 <p>Code Spliting: 代码分割</p>
 <p>分离第三方库:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">webpack.base.conf.js</span><br><span class="line">optimization: &#123;</span><br><span class="line">	splitChunks: &#123;</span><br><span class="line">		cacheGroups: &#123;</span><br><span class="line">			venders: &#123;</span><br><span class="line">				test: /node_modules/,</span><br><span class="line">				name: &apos;vendors&apos;,</span><br><span class="line">				chunks: &apos;all&apos;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>动态导入 / 按需加载<br>比如路由配置的时候进行动态导入</p>
+<p>动态导入 / 按需加载<br>
+比如路由配置的时候进行动态导入</p>
 <p>提取复用的业务代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">default: &#123;</span><br><span class="line">	minSize: 0,</span><br><span class="line">	minChunks: 2,</span><br><span class="line">	reuseExistingChunk: true,</span><br><span class="line">	name: &apos;utils&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>分离非首页使用且复用程度小的第三方库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lodash: &#123;</span><br><span class="line">	test: /node_modules\/lodash\//, // lodash 库单独打包，并命名为 vender-lodash</span><br><span class="line">	name: &apos;vender-lodash&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>缓存:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">optimization: &#123;</span><br><span class="line">	runtimeChunk: &#123;</span><br><span class="line">		name: &apos;mainfest&apos;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>使用内置的hashedModulesPlugin</p>
-<p>webpack plugin:<br>    webpack-bundle-analyzer, 将打包结果显示到网页上</p>
-<p>兼容问题:<br>    1. 不同的浏览器的默认样式不同, 可以使用 normalize.css 抹平这些差异. 或者直接 margin:0; padding: 0;</p>
+<p>webpack plugin:<br>
+	webpack-bundle-analyzer, 将打包结果显示到网页上</p>
+<p>兼容问题:<br>
+	1. 不同的浏览器的默认样式不同, 可以使用 normalize.css 抹平这些差异. 或者直接 margin:0; padding: 0;</p>
 <pre><code>2. html5shiv.js 解决 ie9 以下浏览器对 html5 新增标签不识别的问题.
 
 3. respond.js 解决ie9 一下浏览器不支持 css3 Media Query 问题
@@ -385,10 +386,10 @@
 5. IE 属性过滤器 (hack)
 
 6. 浏览器 css 兼容前缀
-    -o- opera
-    -ms- IE
-    -moz- Firefox
-    -webkit- Chrome
+	-o- opera
+	-ms- IE
+	-moz- Firefox
+	-webkit- Chrome
 
 7. a 标签的几种 css 状态的顺序 love hate
 
@@ -397,9 +398,11 @@
 9. 事件: addEventListener, removeEventListener / attachEvent, detachEvent
 10. 获取一些属性: document.documentElement.属性 | document.body.属性
 11. 在header 里面添加一些浏览器的 hack.
-12. IE不能使用 opacity: filter: </code></pre><p>webpack:</p>
+12. IE不能使用 opacity: filter: 
+</code></pre>
+<p>webpack:</p>
 <p>常见的loader: file-loader, url-loader, source-map-loader, image-loader, babel-loader, css-loader, style-loader, eslint-loader.</p>
-<p>常见的plugin: commons-chunk-plugin, html-webpack-plguin, uglify-js-pugin, extract-text-plugin, define-plugin, hotModuleReplacementPlguin, webpack-bundler-analyzer, compression-webpack-plugin, </p>
+<p>常见的plugin: commons-chunk-plugin, html-webpack-plguin, uglify-js-pugin, extract-text-plugin, define-plugin, hotModuleReplacementPlguin, webpack-bundler-analyzer, compression-webpack-plugin,</p>
 
       
     </div>
@@ -510,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-count">55</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
