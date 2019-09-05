@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="¶js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123">
+<meta name="description" content="js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123;">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javascript 中的继承">
 <meta property="og:url" content="http://yoursite.com/2019/04/07/JavaScript/js-oop/index.html">
 <meta property="og:site_name" content="Len&#39;s blog">
-<meta property="og:description" content="¶js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123">
+<meta property="og:description" content="js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-17T09:14:09.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 中的继承">
-<meta name="twitter:description" content="¶js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123">
+<meta name="twitter:description" content="js 中的继承  原型链 利用原型让一个引用类型继承另一个引用类型的属性和方法  123456789101112131415161718192021222324252627282930function SuperType() &amp;#123;  this.property = true&amp;#125;SuperType.prototype.getSuperValue = function() &amp;#123;">
 
 
 
@@ -352,7 +352,7 @@
       
 
       
-        <h3 id="js-中的继承"><a class="header-anchor" href="#js-中的继承">¶</a>js 中的继承</h3>
+        <h3 id="js-中的继承"><a class="header-anchor" href="#js-中的继承"></a>js 中的继承</h3>
 <ol>
 <li>原型链<br>
 利用原型让一个引用类型继承另一个引用类型的属性和方法</li>
@@ -417,7 +417,7 @@
 通过<code>Object.assign()</code> 来 “拷贝” 原型链</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  SuperClass.call(<span class="keyword">this</span>)</span><br><span class="line">  OtherSuperClass.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 继承一个累</span></span><br><span class="line">MyClass.prototype = <span class="built_in">Object</span>.create(SuperClass.prototype)</span><br><span class="line"><span class="comment">// 混合其他</span></span><br><span class="line"><span class="built_in">Object</span>.assign(MyClass.prototype, OtherSuperClass.prototype);</span><br><span class="line"><span class="comment">// 重新制定构造函数</span></span><br><span class="line">MyClass.prototype.constructor = MyClass</span><br><span class="line"></span><br><span class="line">MyClass.prototype.myMethod = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// do something...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a class="header-anchor" href="#总结">¶</a>总结</h3>
+<h3 id="总结"><a class="header-anchor" href="#总结"></a>总结</h3>
 <ol>
 <li>原型链继承： 任何实例都能对引用类型进行修改</li>
 <li>构造函数： 方法都写在构造函数中，不利于代码复用。</li>
@@ -546,7 +546,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">55</span>
+                  <span class="site-state-item-count">58</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -568,7 +568,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -601,7 +601,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-中的继承"><span class="nav-number">1.</span> <span class="nav-text">¶js 中的继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">¶总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#js-中的继承"><span class="nav-number">1.</span> <span class="nav-text">js 中的继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
