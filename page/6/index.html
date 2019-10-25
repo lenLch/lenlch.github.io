@@ -263,6 +263,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/29/JavaScript/vue_interview-summary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Len lch">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Len's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/29/JavaScript/vue_interview-summary/" itemprop="url">interview-summary</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-29T11:02:17+08:00">
+                2019-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Interview/" itemprop="url" rel="index">
+                    <span itemprop="name">Interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+关于vue的
+
+
+
+如何解决跨域?
+本地的话: 在 webpack的配置文件中配置proxyTable. 当打包上线的时候, 可能会失效, 可以用Nginx设置反向代理或者在后端配置cors
+
+
+vue的生命周期
+所有的生命周期钩子自动绑定 this 上下文到实例中, 这意味着你不能使用箭头函数来定义一个生命周期方法
+
+
+
+创建阶段
+创建前:
+beforeCreate: 在实例初始化之后, 数据观测和 event/watcher 事件配置之前被调用.
+
+创建:
+created: 在实例创建完成后被立即调用. 观测数据, 属性和方法的运算, event/watcher 事件回调. 然而, 挂载阶段还没开始, $el 属性目前不可见
+
+挂载阶段
+挂载前:
+beforeMount: 在挂载开始之前被调用: 相关的 render 函数首次被调用. 该钩子在服务端渲染期间不被调用.
+
+挂载:
+mounted: el 被新创建的 vm.$el 替换, 并挂载到实例上去之后调用该钩子. 该钩子在服务端渲染期间不被调用.
+
+更新阶段
+更新前:
+beforeUpdate: 数据更新时调用, 发生在虚拟 DOM 打补丁之前. 该钩子在服务端渲染期间不被调用.
+
+更新:
+updated: 由于数据更改导致的虚拟 DOM 重新渲染和打补丁, 在这之后会调用该钩子.
+
+keep-alive 阶段
+activated: keep-alive 组件激活时调用.
+
+deactivated: keep-alive 组件停用时调用.
+
+销毁阶段
+销毁前:
+beforeDestory: 实例销毁之前调用. 在这一步, 实例仍然完全可用. 该钩子在服务端渲染期间不被调用.
+
+destoryed: Vue 实例销毁后调用. 调用后, Vue 实例指示的所有东西都会解绑定, 所有的事件监听器会被移除, 所有的子实例
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/29/JavaScript/vue_interview-summary/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/26/Daily_English/April/04-26/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1615,157 +1807,6 @@ Oftentimes, when people tell stories or talk about complex topics, they don’t 
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/Daily_English/April/04-17/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Len lch">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Len's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/Daily_English/April/04-17/" itemprop="url">Daily English</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T21:25:40+08:00">
-                2019-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/English/" itemprop="url" rel="index">
-                    <span itemprop="name">English</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="contact-lenses"><a class="header-anchor" href="#contact-lenses"></a>Contact Lenses</h3>
-<p>隐形眼镜</p>
-<h3 id="intro"><a class="header-anchor" href="#intro"></a>Intro</h3>
-<p>How well can you see? Do you have perfect <code>vision</code>? Many people have bad vision, but don’t want to wear glasses. Luckily for them, there is another option. Contacts are a great choice for people who cannot see very well, but want to wear something other than glasses.</p>
-<p>There are many different kinds of <code>contacts</code>. Hard or soft. Clear or <code>tinted</code>. Contacts that can stay in one’s eyes for months, or contacts that one can throw away at the end of each day. It all depends on the type of person who needs them.</p>
-<p>Jessica uses contacts but is tired of wearing them. How does Gary feel about putting things in his eyes?</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/04/17/Daily_English/April/04-17/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1816,7 +1857,7 @@ Oftentimes, when people tell stories or talk about complex topics, they don’t 
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">85</span>
+                  <span class="site-state-item-count">86</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
